@@ -43,6 +43,13 @@ jobs:
           EXPERIMENT_NAME: pod-delete
           EXPERIMENT_IMAGE: litmuschaos/go-runner
       
+      # Disk Fill
+      - name: Running disk-fill chaos experiment
+        uses: litmuschaos/github-chaos-actions@master
+        env:
+          EXPERIMENT_NAME: disk-fill
+          EXPERIMENT_IMAGE: litmuschaos/go-runner
+                  
       # Container Kill
       - name: Running container kill chaos experiment
         uses: litmuschaos/github-chaos-actions@master
