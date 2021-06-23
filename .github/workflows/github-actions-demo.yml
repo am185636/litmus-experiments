@@ -86,6 +86,28 @@ jobs:
         env:
           EXPERIMENT_NAME: pod-network-loss
           EXPERIMENT_IMAGE: litmuschaos/go-runner
+          
+      # Node CPU Hog
+      - name: Running node-cpu-hog chaos experiment
+        uses: litmuschaos/github-chaos-actions@master
+        env:
+          EXPERIMENT_NAME: node-cpu-hog
+          EXPERIMENT_IMAGE: litmuschaos/go-runner
+          
+      # Node Node Memory Hog
+      - name: Running node-memory-hog chaos experiment
+        uses: litmuschaos/github-chaos-actions@master
+        env:
+          EXPERIMENT_NAME: node-memory-hog
+          EXPERIMENT_IMAGE: litmuschaos/go-runner
+          
+      # Node IO Stress
+      - name: Running node-io-stress chaos experiment
+        uses: litmuschaos/github-chaos-actions@master
+        env:
+          EXPERIMENT_NAME: node-io-stress
+          EXPERIMENT_IMAGE: litmuschaos/go-runner
+          
 
       - name: Uninstall Litmus
         uses: litmuschaos/github-chaos-actions@master
